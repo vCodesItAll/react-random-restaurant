@@ -7,7 +7,7 @@ export default function Home() {
   return (
   <>
   <header className="text-center">
-  <h1>address</h1><h1>JONATHAN</h1><h1>hours</h1>
+  <h1>348 E Main St, Lexington, KY</h1><h1>JONATHAN</h1><h1>open daily 12:31am - 1:02am</h1>
 
   </header>
 
