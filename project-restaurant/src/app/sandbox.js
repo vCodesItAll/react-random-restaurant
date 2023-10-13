@@ -67,7 +67,7 @@ export default function Home() {
             aria-controls="v-pills-home"
             aria-selected="true"
           >
-            Home
+            Appetizers
           </button>
           <button
             className="nav-link"
