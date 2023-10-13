@@ -1,3 +1,8 @@
+![project-restaurant\public\PXL_20231013_142121891.jpg](project-restaurant\public\PXL_20231013_142121891.jpg)
+
+![project-restaurant\public\PXL_20231013_142204095.MP.jpg](project-restaurant\public\PXL_20231013_142204095.MP.jpg)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
