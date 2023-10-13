@@ -1,0 +1,12 @@
+
+
+const entree = {
+    id: 1,
+    title: "Eggs Benedict",
+    cuisineType: "American",
+    category: "Breakfast",
+    description: "Two poached eggs, Canadian bacon and hollandaise",
+    price: 9.99,
+    spicyLevel: 0
+};
+

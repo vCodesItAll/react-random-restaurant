@@ -1,20 +1,23 @@
+"use client"
 import Image from "next/image";
 import styles from "./page.module.css";
 import "bootstrap/dist/css/bootstrap.css";
-import video from "./vid.mp4";
+// import video from "vid.mp4";
 import axios from "axios";
+import React, {useEffect, useState} from "react";
 
 
 
 export default function Home() {
-  const axios = require("axios");
+  let [data, setData] = useState([]);
 
   // Make a request for a user with a given ID
   axios
     .get("https://www.jsonkeeper.com/b/MDXW")
     .then(function (response) {
       // handle success
-      console.log(response);
+      console.log(response.data);
+      setData(response.data);
     })
     .catch(function (error) {
       // handle error
@@ -32,14 +35,14 @@ export default function Home() {
         <h1>hours</h1>
       </header>
 
-      <div className="container">
+      {/* <div className="container">
         <video
           src={video}
           width={500}
           height={500}
           controls
         />
-      </div>
+      </div> */}
 
       <div className="d-flex align-items-start">
         <div
@@ -105,7 +108,20 @@ export default function Home() {
             role="tabpanel"
             aria-labelledby="v-pills-home-tab"
           >
-            APPETIZERS CONTENT
+            APPETIZERS CONTENT 
+            {
+              
+                data.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      <h1>{item.title}</h1>
+                      <p>{item.description}</p>
+                      <p>{item.price}</p>
+                    </div>
+                  )
+                })
+              
+            }
           </div>
           <div
             className="tab-pane fade"
