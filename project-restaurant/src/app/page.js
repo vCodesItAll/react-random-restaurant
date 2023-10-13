@@ -1,25 +1,29 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import "bootstrap/dist/css/bootstrap.css";
+import video from "./vid.mp4";
+import axios from "axios";
 
-const axios = require("axios");
 
-// Make a request for a user with a given ID
-axios
-  .get("https://www.jsonkeeper.com/b/MDXW")
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .finally(function () {
-    // always executed
-  });
 
 export default function Home() {
+  const axios = require("axios");
+
+  // Make a request for a user with a given ID
+  axios
+    .get("https://www.jsonkeeper.com/b/MDXW")
+    .then(function (response) {
+      // handle success
+      console.log(response);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .finally(function () {
+      // always executed
+    });
+
   return (
     <>
       <header className="text-center">
@@ -29,11 +33,11 @@ export default function Home() {
       </header>
 
       <div className="container">
-        <Image
-          src="/bird.png"
+        <video
+          src={video}
           width={500}
           height={500}
-          alt="neopets throwback photo of island bird"
+          controls
         />
       </div>
 
